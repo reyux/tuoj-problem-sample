@@ -9,34 +9,29 @@ This is a project about the problem's format in TUOJ.
 	- etc
 		- [conf]
 		- [init]
+		- [test]
+	[- test] // 测试用文件
 	[- down] 下发文件
 
 # 与服务器的交互
 
-	在 server 上创建一个项目。之后你可以在 server 上手动要求 pull 操作。
+	在 server 上创建一个项目。之后在 server 上手动要求 pull 操作。
 	
-	服务器
-
-# conf
-# sample
-	- doc  // 在线文档，比赛/网页可见内容
-		- description.md
-	- core // 评测核心，所有的源代码
-	- data // 数据
-	- etc
-		- [conf] // 题目配置，指导服务器如何使用这一道题
-		- [init] // 指导服务器初始化的脚本
-	[- down] 下发文件
-
-# 评测
-	评测时创建一个 docker，并到 docker 内。
-
-# gitlab 题库与服务器的交互
-	在 server 上创建一个项目。之后你可以在 server 上利用 pull 按钮来更新题目。
-	在未来我们可能尝试添加一个钩子，使得 push 到 gitlab 后 server 会自动 pull（但我认为目前没有必要）
+	服务器与 git 同步的目录不做任何改变。应当在其他路径下另开一个目录 core 作为评测时的可用目录。
 	
-## conf 交互
-	conf 是一个 json 文件，见 conf/readme.md。
+# etc/conf
 
-## init 
-	init 为服务器指示了当 pull 新的题目后，初始化环境时应该执行的内容。所遵循的规范见 init/readme.md。
+# etc/init
+	init 将指导服务器如何初始化 core 。应当可以设置为自动或者手动。
+	
+	init 文件中每行一句命令。
+	
+	提供的命令如下：
+	
+	- compile <file> [command] 根据后缀名编译文件 file，添加 command 参数。
+	- mktest <start, end>		
+	- make                     调用 files/make (如果文件存在)。服务器应当严格限制该命令。
+
+# etc/test
+	在 pull 操作后，可以利用 test 目录下的文件进行测试。
+	也可以自己在线提交测试，这样提交的测试记录在服务器端。
