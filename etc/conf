@@ -1,6 +1,6 @@
 {
 	statement: {
-		"default" : "description.md"
+		default: "description.md"
 	},	
 	data: [
 		{	isgrouped : 1,
