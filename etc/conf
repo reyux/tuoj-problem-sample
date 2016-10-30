@@ -1,38 +1,34 @@
 {
-	statement: {
-		default: "description.md"
-	},	
-	data: [
-		{	isgrouped : 1,
-			names: ["sample*"],
-			score: 0,
-			type: pretest,
-			time-limit: 100,
-			memory-limit: 10,	 
+	"statement": {
+		"default": "description.md"
+	},
+	"mode": "outputfiles-only",
+	"size-limit", 2048, 
+	"time-limit": 1000,
+	"memory-limit": 10, 	
+	"data": [
+		{	"tag": "pretest",
+			"hooks": "pretest,grouped",
+			"score": 100,
+			"names": ["sample*"],
 		},
-		{	tag: "task 1",
-			isgrouped: 0,
-			names: ["/[1-3]/", "4"], 
-			type: "test",
-			score: 50,
+		{	"tag": "task-1",
+			"score": 50,
+			"names": ["/[1-2]/", "/[3-4]/"],
 		},
-		{	tag: "task 2",
-			isgrouped: 0,
-			type: test,
-			data: [
-				{	names: ["/[5-8]/"],
-					score: 30
+		{	"tag": "task-1",
+			"hooks": "grouped",
+			"data": [
+				{	"names": "/[5-8]/",
+					"score": 30
 				},
-				{	names: ["/[9-10]/"],
-					score: 20
+				{	"names": "/[9-10]/",
+					"score": 30
 				}
 			]
 		}
-		time-limit: 1000,
-		memory-limit: 10,
 	],
-	mode: normal,
-	hooks: {
-		judger: spj
+	"hooks": {
+		"judger": "spj"
 	}
 }

@@ -1,6 +1,6 @@
 # TUOJ Problem Sample
 
-This is the repository to test your server's git, updating as the submodules of TUOJ Problab.
+This is the a sample that submission should contain the outputs but not source code.
 
 See [TUOJ ProbLab][1] for more details.
 
