@@ -2,10 +2,10 @@
 	"statement": {
 		"default": "description.md"
 	},
-	"mode": "outputfiles-only",
-	"size-limit", 2048, 
+	"mode": "single-sourcecode",
+	"size-limit", 50,
 	"time-limit": 1000,
-	"memory-limit": 10, 	
+	"memory-limit": 10,
 	"data": [
 		{	"tag": "pretest",
 			"hooks": "pretest,grouped",
