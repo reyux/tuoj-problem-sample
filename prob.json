@@ -1,6 +1,6 @@
 {
     "titile": "A+B问题",
-    "tags": {
+    "meta": {
         "time_limit": "1s",
         "memory_limit": "128MB"
     },
