@@ -1,0 +1,22 @@
+{
+    "titile": "A+B问题",
+    "tags": {
+        "time_limit": "1s",
+        "memory_limit": "128MB"
+    },
+    "subtask_count": 3,
+    "subtasks": {
+        "1": {
+            "score": 30,
+            "testcase_count": 6 
+        },
+        "2": {
+            "score": 30,
+            "testcase_count": 6
+        },
+        "3": {
+            "score": 40,
+            "testcase_count": 8
+        }
+    }
+}
