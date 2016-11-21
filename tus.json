@@ -4,6 +4,8 @@
 		"sourceId": 0,
 		"langs": {
 			"g++": {
+			},
+			"java": {
 			}
 		}
 	}, {
@@ -15,7 +17,8 @@
 	}, {
 		"cmd": "judge",
 		"ansId": 1,
-		"checker": "default",
+		"checker": "source/spj",
+		"inputFile": [ "data/1.in" ],
 		"stdOutputFile": "data/1.out"
 	}, {
 		"cmd": "score",

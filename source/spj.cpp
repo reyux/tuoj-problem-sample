@@ -11,8 +11,9 @@ int main(int argc, char **argv) {
 	FILE *in = fopen(argv[1], "r");
 	FILE *out = fopen(argv[2], "r");
 	FILE *ans = fopen(argv[3], "r");
-	FILE *scr = fopen(argv[4], "w");
-	FILE *log = fopen(argv[5], "w");
+	FILE *full = fopen(argv[4], "r");
+	FILE *scr = fopen(argv[5], "w");
+	FILE *log = fopen(argv[6], "w");
 
 	fscanf(in, "%lf %lf", &a, &b);
 	fscanf(out, "%lf", &out_ans);
@@ -20,8 +21,11 @@ int main(int argc, char **argv) {
 	
 	double err = out_ans - std_ans;
 	double score = 0;
+	double fulls;
+	fscanf(full, "%lf", &fulls);
+	fclose(full);
 	if (abs(err) < 1e-5)
-		score = 1;
+		score = fulls;
 	
 	fprintf(scr, "%.10lf", score);
 	fprintf(log, "err = %.10lf", err); 	
