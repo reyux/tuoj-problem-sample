@@ -8,15 +8,7 @@
     "subtasks": [
         {
             "score": 30,
-            "testcase_count": 6 
-        },
-        {
-            "score": 30,
-            "testcase_count": 6
-        },
-        {
-            "score": 40,
-            "testcase_count": 8
+            "testcase_count": 3 
         }
     ]
 }
