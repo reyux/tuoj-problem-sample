@@ -5,7 +5,6 @@
         "memory_limit": "128MB",
         "supported_languages": ["g++", "java"]
     },
-    "subtask_count": 3,
     "subtasks": [
         {
             "score": 30,
