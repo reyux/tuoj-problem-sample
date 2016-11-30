@@ -3,11 +3,11 @@
     "meta": {
         "time_limit": "1s",
         "memory_limit": "128MB",
-        "supported_languages": ["g++", "java"]
+        "supported_languages": ["g++", "gcc", "pascal", "java"]
     },
     "subtasks": [
         {
-            "score": 30,
+            "score": 100,
             "testcase_count": 3,
             "scores": [10, 5, 20]
         }
